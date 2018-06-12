@@ -5,10 +5,8 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
 
     <application
         android:allowBackup="true"
@@ -31,45 +29,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".KamusLatinActivity"
             android:label="Kamus"
-            android:theme="@style/AppThemeActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
         </activity>
-
         <activity
             android:name=".OcrCaptureActivity"
-            android:theme="@style/AppThemeActivity"
             android:label="Deteksi"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-
         </activity>
-
         <activity
             android:name=".ProfilActivityDrawer"
             android:label="@string/title_activity_profil_drawer"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".StatistikaActivity"
             android:label="Statistika"
-            android:theme="@style/AppThemeActivity"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".Splashscreen"></activity>
     </application>
 
 </manifest>

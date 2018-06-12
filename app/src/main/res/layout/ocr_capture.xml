@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
     android:keepScreenOn="true">
 <!--
     <android.support.v7.widget.Toolbar
@@ -21,20 +22,51 @@
         android:background="@color/colorYellow"
         />-->
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 
 
-    <com.gitsaderayanbima31.skripsiocr.camera.CameraSourcePreview
-        android:id="@+id/preview"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:navigationIcon="@drawable/ic_info_black_24dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
 
-        <com.gitsaderayanbima31.skripsiocr.camera.GraphicOverlay
-            android:id="@+id/graphicOverlay"
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.01"/>
+
+        <com.gitsaderayanbima31.skripsiocr.camera.CameraSourcePreview
+            android:id="@+id/preview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="250dp"
+            android:padding="16dp"
+            app:navigationIcon="@drawable/ic_info_black_24dp">
 
-    </com.gitsaderayanbima31.skripsiocr.camera.CameraSourcePreview>
+            <com.gitsaderayanbima31.skripsiocr.camera.GraphicOverlay
+                android:id="@+id/graphicOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.gitsaderayanbima31.skripsiocr.camera.CameraSourcePreview>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Arahkan kamera untuk deteksi teks"
+            android:textColor="#ffff"
+            android:layout_marginBottom="32dp"
+            android:textSize="16sp"/>
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

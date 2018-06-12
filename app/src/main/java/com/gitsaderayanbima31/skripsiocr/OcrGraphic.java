@@ -95,13 +95,15 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
     /**
      * Draws the text block annotations for position, size, and raw value on the supplied canvas.
      */
+    //Proses penggambaran text block dengan membaca hasil dari pengenalan text,
+    // sesuai posisi, ukuran, dari nilai hasil text yang telah dikenali
     @Override
     public void draw(Canvas canvas) {
         if (mText == null) {
             return;
         }
-
-        // Draws the bounding box around the TextBlock.
+        // Proses pengambaran kotak pembatas di sekitar TextBlock dengan membaca
+        // nilai sesuai posisi, ukuran, dari hasil pengenalan text yang diterima.
         RectF rect = new RectF(mText.getBoundingBox());
         rect.left = translateX(rect.left);
         rect.top = translateY(rect.top);
@@ -114,7 +116,7 @@ public class OcrGraphic extends GraphicOverlay.Graphic {
         for(Text currentText : textComponents) {
             float left = translateX(currentText.getBoundingBox().left);
             float bottom = translateY(currentText.getBoundingBox().bottom);
-            canvas.drawText(currentText.getValue(), left, bottom, sTextPaint);
+                                                                                                                                                                                                                            canvas.drawText(currentText.getValue(), left, bottom, sTextPaint);
         }
     }
 }
